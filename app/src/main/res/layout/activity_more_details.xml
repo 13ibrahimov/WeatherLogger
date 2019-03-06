@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.wordpress.iibrahimov.weatherlogger.MoreDetailsActivity">
+
+    <TextView
+        android:id="@+id/textLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textCondition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textLocation"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textCondition"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/textCondition"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textCondition"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/pressure"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textPressure"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:text="@string/humidity"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textHumidity"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:text="@string/wind"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textCloudiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textWind"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:text="@string/cloudiness"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textVisibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textCloudiness"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:text="@string/visibility"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textSunrise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textVisibility"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:text="@string/sunrise"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textSunset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textSunrise"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="2dp"
+        android:text="@string/sunset"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/pressureVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textPressure"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/textPressure"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/humidityVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textHumidity"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/textHumidity"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/windVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textWind"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/textWind"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/cloudinessVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textCloudiness"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/textCloudiness"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/visibilityVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textVisibility"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/textVisibility"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/sunriseVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textSunrise"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/textSunrise"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/sunsetVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textSunset"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/textSunset"
+        android:textSize="16sp" />
+
+</RelativeLayout>

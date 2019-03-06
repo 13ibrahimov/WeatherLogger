@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">WeatherLogger</string>
+    <string name="save_button">Save</string>
+    <string name="description">To save and display weather data
+    for your current location click SAVE</string>
+    <string name="temperature">Temperature: </string>
+    <string name="date">Date: </string>
+    <string name="more_details">More Details</string>
+    <string name="pressure">Pressure: </string>
+    <string name="humidity">Humidity: </string>
+    <string name="wind">Wind: </string>
+    <string name="cloudiness">Cloudiness: </string>
+    <string name="visibility">Visibility: </string>
+    <string name="sunset">Sunset: </string>
+    <string name="sunrise">Sunrise: </string>
+
+</resources>
