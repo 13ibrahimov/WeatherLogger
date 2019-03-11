@@ -15,6 +15,7 @@ import android.location.LocationManager;
 import android.content.pm.PackageManager;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -65,18 +66,29 @@ public class MainActivity extends AppCompatActivity {
         try {
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, myLocationListener);
             location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-            latitude = location.getLatitude();
-            longitude = location.getLongitude();
 
-            //Sending Date, Time and current Coordinates to Display Activity
-            Intent intent = new Intent(this, DisplayActivity.class);
-            Bundle extras = new Bundle();
-            extras.putString("DATE", saveDate);
-            extras.putDouble("LATITUDE", latitude);
-            extras.putDouble("LONGITUDE", longitude);
-            intent.putExtras(extras);
-            //Start DisplayActivity
-            startActivity(intent);
+            // Wait until phone determines its location
+            if(location != null) {
+                latitude = location.getLatitude();
+                longitude = location.getLongitude();
+
+                latitude = location.getLatitude();
+                longitude = location.getLongitude();
+
+                //Sending Date, Time and current Coordinates to Display Activity
+                Intent intent = new Intent(this, DisplayActivity.class);
+                Bundle extras = new Bundle();
+                extras.putString("DATE", saveDate);
+                extras.putDouble("LATITUDE", latitude);
+                extras.putDouble("LONGITUDE", longitude);
+                intent.putExtras(extras);
+                //Start DisplayActivity
+                startActivity(intent);
+            }
+            else {
+                String message = "Waiting for location...";
+                Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
+            }
 
         } catch (SecurityException e) {
             Toast.makeText(MainActivity.this, "WeatherLogger does not have permission to use your location.", Toast.LENGTH_LONG).show(); // lets the user know there is a problem with the gps
