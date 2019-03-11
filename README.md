@@ -8,7 +8,7 @@ For any further app development, PLEASE sign up on OpenWeatherMAP and get your o
 Create a file named **gradle.properties** inside the dir:
 - Mac: /Users/Your_Username/.gradle
 - Linux: /home/Your_Username/.gradle
-- Windows: C:\Users\Your_Username\.gradle
+- Windows: C:\Users\Your_Username\\.gradle
   
 if it doesn't exist already. And add this line: **WeatherLogger_ApiKey="YOUR_PERSONAL_APPID"**
 
