@@ -15,7 +15,6 @@ import android.location.LocationManager;
 import android.content.pm.PackageManager;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
@@ -25,8 +24,6 @@ public class MainActivity extends AppCompatActivity {
     protected LocationManager locationManager;
     protected Location location;
     protected double latitude,longitude;
-    //protected TextView textLoc;
-    public static int MY_PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION =1;
 
     //Time
     protected long currentTime;
