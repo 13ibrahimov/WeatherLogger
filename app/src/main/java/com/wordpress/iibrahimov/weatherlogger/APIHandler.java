@@ -18,8 +18,14 @@ public class APIHandler {
 
     private String url = "http://api.openweathermap.org/data/2.5/weather?";
 
-    //GET your own personal APPID from OpenWeatherMap and EDIT this field
-    private String APPID = "21acc258e3d02d98da8a138835641680";
+    //GET your own personal APPID from OpenWeatherMap
+    //ApiKey is defined inside gradle.properties file inside dir:
+                            //Mac: /Users/<Your Username>/.gradle
+                            //Linux: /home/<Your Username>/.gradle
+                            //Windows: C:\Users\<Your Username>\.gradle
+    //Create gradle.properties file inside the dir specified above if it doesn't already exist
+    //And add this line: WeatherLogger_ApiKey="YOUR_PERSONAL_APPID"
+    private String APPID = BuildConfig.ApiKey;
 
     /*
     WeatherLogger App DOES use cleartext network traffic(cleartext HTTP)
